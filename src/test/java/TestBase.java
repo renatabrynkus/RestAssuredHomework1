@@ -6,11 +6,8 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.parallel.Execution;
 
 public class TestBase {
-
 
     public static RequestSpecification getRequestSpec(String city, String country, String id) {
         return new RequestSpecBuilder()
