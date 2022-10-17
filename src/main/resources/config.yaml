@@ -1,0 +1,19 @@
+base:
+  baseUri: https://api.openweathermap.org/data/2.5/weather
+  appId: 89a2ed8a594cc497a6273490e7ca59dd
+location:
+  location1:
+    city: London
+    country: GB
+    id: 2643743
+    active: false
+  location2:
+    city: Oxford
+    country: GB
+    id: 2640729
+    active: true
+  location3:
+    city: Gdańsk
+    country: PL
+    id: 3099434
+    active: false
