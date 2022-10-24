@@ -7,12 +7,17 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.platform.engine.support.discovery.SelectorResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static java.util.function.Predicate.isEqual;
+import static org.hamcrest.Matchers.isA;
 
 public class TestBase {
 
@@ -53,7 +58,8 @@ public class TestBase {
     public static ResponseSpecification getResponseSpec() {
         return new ResponseSpecBuilder()
                 .build()
-                .statusCode(200);
+                .statusCode(200)
+                .body("name", Matchers.equalTo(System.getProperty("city")));
     }
 }
 
