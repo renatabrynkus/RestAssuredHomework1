@@ -40,7 +40,7 @@ public class TestBase {
                 requestValues.put("appid", System.getProperty("appId"));
                 requestValues.put("id", System.getProperty("id"));
             }
-            default -> logger.info("-----> You can add header or parameters <-----");
+            default -> logger.info("-----> You can add a header or a parameter <-----");
         }
         return requestValues;
     }
