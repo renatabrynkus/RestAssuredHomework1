@@ -1,4 +1,3 @@
-
 import configuration.ApplicationProperties;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
@@ -9,20 +8,16 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.platform.engine.support.discovery.SelectorResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.util.function.Predicate.isEqual;
-import static org.hamcrest.Matchers.isA;
-
 public class TestBase {
 
     private static ApplicationProperties applicationProperties;
-    private static Logger logger = LoggerFactory.getLogger(TestBase.class);
+    private static final Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeAll
     static void beforeAll() {
